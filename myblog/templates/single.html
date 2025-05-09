@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% load static %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Name of your web site">
+<meta name="author" content="Marketify">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Alice.jacksonandalice.com </title>
+
+<!-- STYLES -->
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href=" {% static 'css/plugins.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+
+</head>
+
+<body>
+	
+	<!-- PRELOADER -->
+	<!-- <div class="waxon_tm_preloader">
+		<div class="spinner_wrap">
+			<div class="spinner"></div>
+		</div>
+	</div> -->
+	<!-- /PRELOADER -->
+
+<!-- WRAPPER ALL -->
+
+	<!-- MAGIC CURSOR VALUES: show, hide -->
+	
+<div class="waxon_tm_all_wrap" data-magic-cursor="show">
+	
+	<!-- TOPBAR -->
+	<div class="waxon_tm_topbar home">
+		<div class="container">
+			<div class="topbar_inner">
+				<div class="logo">
+				</div>
+				<div class="menu">
+					<div class="links">
+						<ul class="anchor_nav">
+							<li>
+								<a href="{% url 'home' %}#home">
+									<span class="first">Home</span>
+									<span class="second">Home</span>	
+								</a>
+							</li>
+							<li>
+								<a href="{% url 'home' %}#about">
+									<span class="first">About</span>
+									<span class="second">About</span>	
+								</a>
+							</li>
+							<li>
+								<a href="{% url 'home' %}#portfolio">
+									<span class="first">My work</span>
+									<span class="second">My work</span>	
+								</a>
+							</li>
+							<li>
+								<a href="{% url 'home' %}#publications">
+									<span class="first">Publications</span>
+									<span class="second">Publications</span>	
+								</a>
+							</li>
+							<li>
+								<a href="{% url 'home' %}#awards">
+									<span class="first">Awards</span>
+									<span class="second">Awards</span>	
+								</a>
+							</li>
+							<li>
+								<a href="{% url 'home' %}#blog">
+									<span class="first">Blog</span>
+									<span class="second">Blog</span>	
+								</a>
+							</li>
+							<li>
+								<a href="{% url 'home' %}#contact">
+									<span class="first">Get In Touch</span>
+									<span class="second">Get In Touch</span>	
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /TOPBAR -->
+	
+	<!-- MOBILE MENU -->
+	<div class="waxon_tm_mobile_menu">
+		<div class="topbar_inner">
+			<div class="container bigger">
+				<div class="topbar_in">
+					<div class="logo">
+					</div>
+					<div class="my_trigger">
+						<div class="hamburger hamburger--collapse-r">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dropdown">
+			<div class="container">
+				<div class="dropdown_inner">
+					<ul class="anchor_nav">
+						<li><a href="{% url 'home' %}#home">Home</a></li>
+						<li><a href="{% url 'home' %}#about">About</a></li>
+						<li><a href="{% url 'home' %}#portfolio">My work</a></li>
+						<li><a href="{% url 'home' %}#publications">Publications</a></li>
+						<li><a href="{% url 'home' %}#awards">Awards</a></li>
+						<li><a href="{% url 'home' %}#blog">Blog</a></li>
+						<li><a href="{% url 'home' %}#contact">Get In Touch</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /MOBILE MENU -->
+
+
+	
+	
+	
+	<!-- BLOG DETAIL -->
+<div class="waxon_tm_blog_detail" id="blog_detail">
+	<div class="container">
+	  <div class="blog_post_wrapper">
+		<h2 class="post-title">{{ post.title }}</h2>
+		
+  
+		{% if post.image %}
+		<div class="post-image">
+		  <img src="{{ post.image.url }}" alt="{{ post.title }}">
+		</div>
+		{% endif %}
+  
+		<div class="post-content">
+		  <p>{{ post.content|linebreaks }}</p>
+		</div>
+		<small>by {{ post.author }}</small>
+	  </div>
+	</div>
+  </div>
+  <!-- /BLOG DETAIL -->
+  
+
+
+	
+	
+	<!-- COPYRIGHT -->
+	<div class="waxon_tm_copyright">
+		<div class="container" style="text-align: center;">
+			<p>Copyright,&copy; JacksonandAlice.com All rights Reserved</p>
+			<!-- <div class="copyright_inner">
+				<ul>
+					<li class="wow fadeInDown" data-wow-duration="0.8s">
+						<span>WAXON</span>
+						<span>PORTFOLIO TEMPLATE</span>
+					</li>
+					<li class="wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.2s">
+						<span>Brook 103,</span>
+						<span>90021 New York, USA</span>
+					</li>
+					<li class="wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.4s">
+						<span><a href="#"><span class="__cf_email__" data-cfemail="375f5e7740564f58591954585a">test@gmail.com</span></a></span>
+						<span>+77 033 442 55 57</span>
+					</li>
+					<li class="wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.6s">
+						<div class="social">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="first"><img class="svg" src="img/svg/social/facebook.svg" alt="" /></span>
+										<span class="second"><img class="svg" src="img/svg/social/facebook.svg" alt="" /></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="first"><img class="svg" src="img/svg/social/twitter.svg" alt="" /></span>
+										<span class="second"><img class="svg" src="img/svg/social/twitter.svg" alt="" /></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="first"><img class="svg" src="img/svg/social/instagram.svg" alt="" /></span>
+										<span class="second"><img class="svg" src="img/svg/social/instagram.svg" alt="" /></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="first"><img class="svg" src="img/svg/social/soundcloud.svg" alt="" /></span>
+										<span class="second"><img class="svg" src="img/svg/social/soundcloud.svg" alt="" /></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="first"><img class="svg" src="img/svg/social/youtube.svg" alt="" /></span>
+										<span class="second"><img class="svg" src="img/svg/social/youtube.svg" alt="" /></span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="first"><img class="svg" src="img/svg/social/vk.svg" alt="" /></span>
+										<span class="second"><img class="svg" src="img/svg/social/vk.svg" alt="" /></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div> -->
+		</div>
+	</div>
+	<!-- /COPYRIGHT -->
+	
+	<!-- MAGIC CURSOR -->
+	<!-- <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div> -->
+	<!-- /MAGIC CURSOR -->
+	
+		
+</div>
+<!-- / WRAPPER ALL -->
+	
+<!-- SCRIPTS -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script data-cfasync="false" src=" {% static '/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="js/jquery.js"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
+<script src=" {% static 'js/plugins.js' %}"></script>	
+<script src=" {% static 'js/init.js' %}"></script>
+<!-- /SCRIPTS -->
+
+</body>
+</html>

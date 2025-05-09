@@ -1,0 +1,3142 @@
+@charset "utf-8";
+/*
+/*	Copyright (c) 2020 Marketify
+/*	Author: Marketify
+/*	This file is made for CURRENT TEMPLATE
+
+01) WAXON BASE
+02) WAXON TOPBAR
+03) WAXON MOBILE MENU
+04) WAXON HERO
+05) WAXON ABOUT
+06) WAXON SERVICES
+07) WAXON PORTFOLIO
+08) WAXON TESTIMONIALS
+09) WAXON NEWS
+10) WAXON CONTACT
+11) WAXON COPYRIGHT
+12) WAXON CURSOR
+13) WAXON GLITCH EFFECT
+14) WAXON PARTICLE EFFECT
+15) WAXON SLIDER
+16) WAXON MODALBOXES
+17) WAXON ABOUT PAGE
+18) WAXON MEDIA QUERIES (FOR SMALL DEVICES)
+
+/*---------------------------------------------------*/
+/*	01) WAXON BASE
+/*---------------------------------------------------*/
+
+:root{
+    --main-color: #000;
+}
+
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	font-family: "Roboto";
+	font-size: 15px;
+	line-height: 30px;
+	letter-spacing: 0px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #fff;
+	color: #767676;
+}
+svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+img.svg{
+	width: 15px;
+	height: 15px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #6f6f6f;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #6f6f6f;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #6f6f6f;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #6f6f6f;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #6f6f6f;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: #6f6f6f;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:500;
+	line-height: 1.4;
+	font-family: "Poppins";
+	color: #000;
+}
+
+.container {
+	max-width: 1400px;
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	height:auto;
+	padding:0px 40px;
+	position:relative;
+	clear:both;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+@media (max-width: 1040px) {
+.container{padding:0px 20px;}
+}
+
+.waxon_tm_all_wrap{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.waxon_tm_all_wrap,
+.waxon_tm_all_wrap *{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	   -moz-box-sizing: border-box; /* Firefox, other Gecko */
+			box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+.waxon_tm_preloader{
+  position: fixed;
+  background-color: #fff;
+  z-index: 9999999;
+  height: 100%;
+  width: 100%;
+	
+  -webkit-transition: .2s all ease;
+  -o-transition: .2s all ease;
+  transition: .2s all ease;
+  -webkit-transition-delay: .5s;
+  -o-transition-delay: .5s;
+  transition-delay: .5s; }  
+.waxon_tm_preloader .spinner_wrap{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 33333;
+}
+.waxon_tm_preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+.waxon_tm_preloader:before,
+.waxon_tm_preloader:after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: #000;
+	
+    -webkit-transition: .7s all ease;
+    -o-transition: .7s all ease;
+    transition: .7s all ease;
+}
+.waxon_tm_preloader:before{
+    top: 0;
+    left: 0; 
+}
+.waxon_tm_preloader:after{
+    bottom: 0;
+	left: 0; 
+}
+.waxon_tm_preloader.loaded:before, 
+.waxon_tm_preloader.loaded:after{height: 0%;}
+
+/*---------------------------------------------------*/
+/*	02) WAXON TOPBAR
+/*---------------------------------------------------*/
+
+.waxon_tm_topbar{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 10;
+	padding: 20px 0px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_topbar.home{
+	top: -100px;
+}
+.waxon_tm_topbar.home.opened{top: 0px;}
+.waxon_tm_topbar.extra{top: 0px !important;}
+.waxon_tm_topbar.animate{
+	padding: 15px 0px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.06);
+}
+.waxon_tm_topbar .topbar_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.waxon_tm_topbar .topbar_inner .logo img{
+	max-width: 70px;
+}
+.waxon_tm_topbar .wrapper{
+	width: 30px;
+	height: 17px;
+	top: 5px;
+	position: relative;
+}
+.waxon_tm_topbar .menu{
+	display: flex;
+	align-content: center;
+}
+.waxon_tm_topbar .menu .links ul{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	top: 5px;
+}
+.waxon_tm_topbar .menu .links ul li{
+	margin: 0px 30px 0px 0px;
+	display: inline-block;
+}
+.waxon_tm_topbar .menu .links ul li:last-child{
+	margin-right: 0px;
+}
+.waxon_tm_topbar .menu .links ul li a{
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins";
+	font-weight: 600;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.waxon_tm_topbar .menu .links ul li a .first{
+	position: absolute;
+	transform: translateY(100%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_topbar .menu .links ul li a .second{
+	position: relative;
+	display: block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_topbar .menu .links ul li a:hover .first{
+	transform: translateY(0);
+}
+.waxon_tm_topbar .menu .links ul li a:hover .second{
+	transform: translateY(-100%);
+}
+.waxon_tm_topbar .menu .links ul li.current a .first{
+	transform: translateY(0);
+}
+.waxon_tm_topbar .menu .links ul li.current a .second{
+	transform: translateY(-100%);
+}
+.waxon_tm_topbar .menu .links ul li.current a{
+	color: #000;
+}
+.waxon_tm_topbar .menu .links ul li a:hover{color: var(--main-color);}
+.waxon_tm_topbar .menu .links ul li.current a{color: var(--main-color);}
+
+/*---------------------------------------------------*/
+/*	03) WAXON MOBILE MENU
+/*---------------------------------------------------*/
+
+.waxon_tm_mobile_menu{
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;
+	z-index: 10;
+}
+.waxon_tm_mobile_menu .topbar_inner{
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #fff;
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+}
+.waxon_tm_mobile_menu .topbar_in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.my_trigger .hamburger{
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+.my_trigger .hamburger-box{
+    width: 30px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+}
+.my_trigger .hamburger-inner{
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+.my_trigger .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+    width: 30px;
+    height: 2px;
+    background-color: #333333;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+	
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+.my_trigger .hamburger-inner::before,
+.my_trigger .hamburger-inner::after{
+    content: "";
+    display: block;
+}
+.my_trigger .hamburger-inner::before{top: -8px;}
+.my_trigger .hamburger-inner::after{ bottom: -10px;}
+.my_trigger .hamburger--collapse-r .hamburger-inner{
+    top: auto;
+    bottom: 0;
+    transition-duration: 0.13s;
+    transition-delay: 0.13s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.my_trigger .hamburger--collapse-r .hamburger-inner::after{
+    top: -16px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+.my_trigger .hamburger--collapse-r .hamburger-inner::before{
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.my_trigger .hamburger--collapse-r.is-active .hamburger-inner{
+    transform: translate3d(0, -10px, 0) rotate(45deg);
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.my_trigger .hamburger--collapse-r.is-active .hamburger-inner::after{
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+.my_trigger .hamburger--collapse-r.is-active .hamburger-inner::before{
+    top: 0;
+    transform: rotate(90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.my_trigger .hamburger{
+	padding: 0px;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.my_trigger .hamburger-box{display: block;}
+.my_trigger .hamburger .hamburger-inner::before,
+.my_trigger .hamburger .hamburger-inner::after,
+.my_trigger .hamburger .hamburger-inner{
+	background-color: #000;
+	width: 30px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_mobile_menu .dropdown{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #fff;
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	display: none;
+}
+.waxon_tm_mobile_menu .dropdown .dropdown_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 25px 0px;
+}
+.waxon_tm_mobile_menu .dropdown .dropdown_inner ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.waxon_tm_mobile_menu .dropdown .dropdown_inner ul li{
+	margin: 0px;
+	float: left;
+	width: 100%;
+}
+.waxon_tm_mobile_menu .dropdown .dropdown_inner ul li a{
+	text-decoration: none;
+	color: #000;
+	display: inline-block;
+	padding: 4px 0px;
+	font-family: "Poppins";
+	font-weight: 500;
+}
+.waxon_tm_mobile_menu .logo img{max-width: 70px;}
+
+/*---------------------------------------------------*/
+/*	04) WAXON HERO
+/*---------------------------------------------------*/
+
+.waxon_tm_hero{
+	width: 100%;
+	height: 100vh;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.waxon_tm_hero .background{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.waxon_tm_hero .background .leftpart{
+	width: 33%;
+	height: 100%;
+	background-color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.waxon_tm_hero .background .rightpart{
+	width: 100%;
+	height: 100%;
+	float: left;
+	padding-left: 33%;
+}
+.waxon_tm_hero .background .rightpart .inner{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.waxon_tm_hero .background .rightpart .image{
+	position: absolute;;
+	top: -20px;
+	bottom: -20px;
+	left: -20px;
+	right: -20px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.waxon_tm_hero .background .myOverlay{
+	position:absolute;
+	top: 0px;
+	bottom:0px;
+	width: 100%;
+	background-color: #fff;
+	z-index: 2;
+	left: 0%;
+	
+	-webkit-transition: all .7s ease;
+	   -moz-transition: all .7s ease;
+	    -ms-transition: all .7s ease;
+	     -o-transition: all .7s ease;
+	        transition: all .7s ease;
+}
+.waxon_tm_hero .background .overlay_image{
+	position:absolute;
+	top: 0px;
+	bottom:0px;
+	width: 100%;
+/*	background-color: rgba(255,255,255,.3);*/
+	z-index: 1;
+}
+.waxon_tm_hero .background .myOverlay.dark{background-color: #000;}
+.waxon_tm_hero .background .myOverlay.loaded{left: 100%;}
+.waxon_tm_hero .content .container{height: 100%;}
+.waxon_tm_hero .content{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 4;
+}
+.waxon_tm_hero .content_inner{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.waxon_tm_hero .content_inner h3{
+	color: var(--main-color);
+	font-size: 120px;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin: 0px;
+	padding: 0px;
+	line-height: 1.1;
+}
+.waxon_tm_hero .content_inner h3.stroke{
+	-webkit-text-stroke: 1px var(--main-color);
+	color: transparent;
+}
+.waxon_tm_hero .content_inner span{
+	font-family: "Poppins";
+	font-weight: 400;
+	display: inline-block;
+	padding-top: 20px;
+	font-style: italic;
+}
+.waxon_tm_down{
+	position: absolute;
+	z-index: 7;
+	bottom: 50px;
+}
+.waxon_tm_down[data-position="left"]{
+	left: 0px;
+}
+.waxon_tm_down[data-position="right"]{
+	right: 0px;
+}
+.waxon_tm_down[data-position="center"]{
+	left:50%;
+	transform: translateX(-50%);
+}
+.waxon_tm_down .line_wrapper{
+	position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 0;
+    right: 0;
+   	margin: 0px auto;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    visibility: visible;
+	
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+    transition: all .7s;
+}
+.waxon_tm_down .line_wrapper{
+    width: 1px;
+    height: 50px;
+    background: none;
+	display: block;
+}
+.waxon_tm_down .line_wrapper:before{
+	content: "";
+	background-color: #000;
+	width: 1px;
+    height: 50%;
+    display: block;
+    top: 0;
+	
+    -webkit-animation: scroll-down 2s ease-in-out infinite;
+    -ms-animation: scroll-down 2s ease-in-out infinite;
+    animation: scroll-down 2s ease-in-out infinite;;
+}
+
+@-webkit-keyframes scroll-down {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 100%;
+  }
+  70% {
+    height: 100%;
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+  }
+  100% {
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+.waxon_tm_down[data-skin="light"] .line_wrapper:before{
+	background-color: #fff;
+}
+
+/*---------------------------------------------------*/
+/*	05) WAXON ABOUT
+/*---------------------------------------------------*/
+
+.waxon_tm_about{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 193px;
+	padding-top: 230px;
+}
+.waxon_tm_about .about_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+}
+.waxon_tm_about .about_inner .left{
+	width: 40%;
+}
+.waxon_tm_about .about_inner .left img{
+	min-width: 10%;
+}
+.waxon_tm_about .about_inner .right{
+	width: 60%;
+	padding-left: 80px;
+}
+.waxon_tm_about .name{
+	width: 100%;
+	float: left;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	padding-bottom: 35px;
+	margin-bottom: 32px;
+}
+.waxon_tm_about .name h3{
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 35px;
+	position: relative;
+	color: var(--main-color);
+}
+.waxon_tm_about .name h3 .bg{
+	position:absolute;
+	left: 0px;
+	top: 0px;
+	font-family: "Poppins";
+	color: transparent;
+	font-size: 150px;
+	font-weight: 900;
+	opacity: .1;
+	line-height: 0;
+	-webkit-text-stroke: 1px #000;
+	-webkit-user-select: none;
+}
+.waxon_tm_about .name span{
+	font-family: "Poppins";
+    font-weight: 400;
+    display: inline-block;
+    padding-top: 10px;
+}
+.waxon_tm_about span.job{
+	font-style: italic;
+}
+.waxon_tm_about .right .text{
+	width: 100%;
+	float: left;
+	margin-bottom: 23px;
+}
+.waxon_tm_about .right .text p{
+	margin-bottom: 13px;
+}
+.waxon_tm_button{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_button a{
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--main-color);
+	padding: 13px 50px;
+	display: inline-block;
+	border: 2px solid var(--main-color);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_button a:hover{
+	background-color: transparent;
+	color: var(--main-color);
+}
+.waxon_tm_button[data-position="left"]{text-align: left;}
+.waxon_tm_button[data-position="center"]{text-align: center;}
+.waxon_tm_button[data-position="right"]{text-align: right;}
+
+/*---------------------------------------------------*/
+/*	06) WAXON SERVICES
+/*---------------------------------------------------*/
+
+.waxon_tm_service{
+	margin-bottom: 140px;
+}
+.waxon_tm_service,
+.waxon_tm_service .service_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_service ul{
+	margin: 0px;
+	list-style-type: none;
+	cursor: e-resize;
+}
+.waxon_tm_service ul li{
+	margin: 0px;
+}
+.waxon_tm_service ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.waxon_tm_service ul li .svg{
+	position: absolute;
+	left: 0px;
+	top: 5px;
+	width: 50px;
+	height: 50px;
+	color: var(--main-color);
+	
+	-webkit-transition: all .4s ease;
+	   -moz-transition: all .4s ease;
+	    -ms-transition: all .4s ease;
+	     -o-transition: all .4s ease;
+	        transition: all .4s ease;
+}
+.waxon_tm_service ul li .details{
+	padding-left: 75px;
+}
+.waxon_tm_service ul li .details h3{
+	margin: 0px;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+
+/*---------------------------------------------------*/
+/*	07) WAXON PORTFOLIO
+/*---------------------------------------------------*/
+
+.waxon_tm_portoflio{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 200px;
+	padding: 205px 0px 100px 0px;
+	background-color: #f8f9fa;
+}
+.waxon_tm_portoflio .portfolio_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 105px;
+}
+.waxon_tm_main_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.waxon_tm_main_title .title h3{
+	text-transform: uppercase;
+    font-weight: 900;
+    font-size: 35px;
+	position: relative;
+}
+.waxon_tm_main_title .title h3 .bg{
+	position:absolute;
+	left: -6px;
+	top: 0px;
+	font-family: "Poppins";
+	color: transparent;
+	font-size: 150px;
+	font-weight: 900;
+	opacity: .1;
+	line-height: 0;
+	-webkit-text-stroke: 1px #000;
+	-webkit-user-select: none;
+}
+.waxon_tm_portoflio .portfolio_filter{
+	width: auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.waxon_tm_portoflio .portfolio_filter ul{
+	margin: 0px;
+	list-style-type: none;
+	padding-right: 50px;
+	position: relative;
+	top: 3px;
+}
+.waxon_tm_portoflio .portfolio_filter ul li{
+	margin: 0px 30px 0px 0px;
+	display: inline-block;
+	opacity: 0;
+	visibility: hidden;
+	left: 10px;
+	position: relative;
+	
+	-webkit-transition: all .2s ease;
+	   -moz-transition: all .2s ease;
+	    -ms-transition: all .2s ease;
+	     -o-transition: all .2s ease;
+	        transition: all .2s ease;
+}
+.waxon_tm_portoflio .portfolio_filter ul li.opened{
+	opacity: 1;
+	visibility: visible;
+	left: 0px;
+}
+.waxon_tm_portoflio .portfolio_filter ul li:last-child{
+	margin-right: 0px;
+}
+.waxon_tm_portoflio .portfolio_filter ul li a{
+	text-decoration: none;
+	color: #000;
+	font-family: "Poppins";
+	font-weight: 600;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.waxon_tm_portoflio .portfolio_filter ul li a.current{
+	color: var(--main-color);
+}
+.waxon_tm_portoflio .portfolio_filter ul li a .first{
+	position: absolute;
+	transform: translateY(100%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_portoflio .portfolio_filter ul li a .second{
+	position: relative;
+	display: block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_portoflio .portfolio_filter ul li a:hover .first{
+	transform: translateY(0);
+}
+.waxon_tm_portoflio .portfolio_filter ul li a:hover .second{
+	transform: translateY(-100%);
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper{
+	width: 30px;
+	height: 17px;
+	position: relative;
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper a{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper .trigger{
+	position: absolute;
+	width: 30px;
+	height: 3px;
+	background-color: #000;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper .trigger:before{
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 3px;
+	background-color: #000;
+	left: 0px;
+	top: -7px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper .trigger:after{
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 3px;
+	background-color: #000;
+	right: 0px;
+	bottom: -7px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper a:hover .trigger:before{
+	left: 14px;
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper a:hover .trigger:after{
+	right: 14px;
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper a.opened .trigger:before{
+	left: 14px;
+}
+.waxon_tm_portoflio .portfolio_filter .wrapper a.opened .trigger:after{
+	right: 14px;
+}
+.waxon_tm_portoflio .portfolio_inner ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.waxon_tm_portoflio .portfolio_inner ul li{
+	margin: 0px 0px 40px 0px;
+	float: left;
+	width: 33.3333%;
+	padding-left: 50px;
+}
+.waxon_tm_portoflio .portfolio_inner ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.waxon_tm_portoflio .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 2;
+	background-color: rgba(255,255,255,.7);
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_portoflio .overlay .myimage{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	max-width: 150px !important;
+	min-width: 150px !important;
+	z-index: 1;
+}
+.waxon_tm_portoflio .portfolio_inner ul li .list_inner .image:hover .overlay{
+	opacity: 1;
+	visibility:visible; 
+}
+.waxon_tm_portoflio .portfolio_inner ul li .list_inner .title h3 a:hover{color: var(--main-color);}
+.full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 4;
+}
+.waxon_tm_portoflio .portfolio_inner ul li .list_inner .image{
+	position: relative;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+.waxon_tm_portoflio .portfolio_inner ul li .list_inner .image img{
+	min-width: 100%;
+	opacity: 0;
+}
+.waxon_tm_portoflio .portfolio_inner ul li .list_inner .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_portoflio .portfolio_inner ul li .list_inner .image:hover .main{
+	transform: scale(1.1) translateZ(0);
+}
+.waxon_tm_portoflio .portfolio_inner ul li .title h3 a{
+	margin: 0px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+	color: #000;
+	text-decoration: none;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_portoflio .portfolio_inner ul li .title span a{
+	text-decoration: none;
+	color: #767676;
+	position: relative;
+	display: inline-block;
+}
+
+/*---------------------------------------------------*/
+/*	08) WAXON TESTIMONIALS
+/*---------------------------------------------------*/
+
+.waxon_tm_testimonials{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 100px;
+}
+.waxon_tm_testimonials .testimonials_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	overflow: hidden;
+	padding-top: 105px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.waxon_tm_testimonials .owl-carousel .owl-stage{display: flex;}
+
+.waxon_tm_testimonials .item{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	height: 100%;
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+.waxon_tm_testimonials .text{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	border: 2px solid rgba(0,0,0,.07);
+	padding: 40px;
+	margin-bottom: 30px;
+}
+.waxon_tm_testimonials .text:before{
+	position: absolute;
+	content: "";
+	height: 0px;
+    width: 0px;
+	top: 100%;
+    left: 50px;
+    border: solid transparent;
+    border-top-color: rgba(0,0,0,.07);
+    border-width: 18px 18px 0px 0px;
+}
+.waxon_tm_testimonials .text:after{
+	position: absolute;
+	content: "";
+	top: 100%;
+    left: 50px;
+	height: 0px;
+    width: 0px;
+    border: solid transparent;
+    border-top-color: #fff;
+    border-width: 14px 13px 0px 0px;
+    margin-left: 2px;
+}
+.waxon_tm_testimonials .details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	margin-top: auto;
+}
+.waxon_tm_testimonials .details .image{
+	position: relative;
+	width: 60px;
+	height: 60px;
+}
+.waxon_tm_testimonials .details .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+}
+.waxon_tm_testimonials .details .short{
+	padding-left: 20px;
+}
+.waxon_tm_testimonials .details .author{
+	font-size: 16px;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+.waxon_tm_testimonials .details .job{
+	margin: 0px;
+	padding: 0px;
+	font-style: italic;
+}
+.waxon_tm_testimonials .owl-carousel .owl-stage-outer{
+	overflow: hidden;
+}
+.waxon_tm_testimonials .owl-carousel .owl-stage-outer{
+	overflow: visible;
+}
+.waxon_tm_testimonials .owl-item.active{
+	opacity: 1;
+}
+.waxon_tm_testimonials .owl-item{
+	opacity: 0;
+}
+.waxon_tm_testimonials .quote_list ul li .svg{color: var(--main-color);}
+
+/*---------------------------------------------------*/
+/*	09) WAXON NEWS
+/*---------------------------------------------------*/
+
+.waxon_tm_news{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding: 205px 0px 100px 0px;
+	background-color: #f8f9fa;
+}
+.waxon_tm_news .news_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	padding-top: 105px;
+}
+.waxon_tm_news .news_inner ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.waxon_tm_news .news_inner ul li{
+	margin: 0px 0px 50px 0px;
+	float: left;
+	width: 33.3333%;
+	padding-left: 50px;
+}
+.waxon_tm_news .news_inner ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	box-shadow: 0px 0px 20px rgba(0,0,0,.07);
+}
+
+.waxon_tm_news ul li .image{
+	position: relative;
+	overflow: hidden;
+}
+.waxon_tm_news ul li .image img{
+	min-width: 100%;
+	opacity: 0;
+}
+.waxon_tm_news ul li .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center; 
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_news ul li .list_inner .image:hover .main{
+	transform: scale(1.1) translateZ(0);
+}
+.waxon_tm_news ul li .details{
+	width: 100%;
+	float: left;
+	padding: 30px 40px 25px 40px;
+	background-color: #fff;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_news ul li .details .title{
+	margin-bottom: 10px;
+	line-height: 1.4;
+}
+.waxon_tm_news ul li .details .title a{
+	text-decoration: none;
+	color: #000;
+	font-size: 18px;
+	font-weight: 600;
+	display: inline-block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_news ul li .details .title a:hover{
+	color: #000;
+}
+.waxon_tm_news ul li .details .date{
+	font-family: "Poppins";
+	font-size: 13px;
+	color: #767676;
+	font-style: italic;
+}
+.waxon_tm_news ul li .details .date a{
+	text-decoration: none;
+	color: #767676;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_news ul li .details .date a:hover{
+	color: #000;
+}
+.waxon_tm_news ul li .details .date span{
+	position: relative;	
+}
+.waxon_tm_news ul li .details .date span:before{
+	position: relative;
+	content: "/";
+	font-size: 10px;
+	padding: 0px 7px 0px 2px;
+}
+.waxon_tm_news ul li .extra{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 25px;
+	position: relative;
+}
+.waxon_tm_news ul li .extra:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0,0,0,.1);
+	bottom: -7px;
+}
+.waxon_tm_news .news_inner ul li .details .title a:hover{color: var(--main-color);}
+
+/*---------------------------------------------------*/
+/*	10) WAXON CONTACT
+/*---------------------------------------------------*/
+
+.waxon_tm_contact{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	margin-bottom: 150px;
+	padding-top: 205px;
+}
+.waxon_tm_contact .contact_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left; 
+}
+.waxon_tm_contact .contact_inner .wrapper{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	padding-top: 43px;
+}
+.waxon_tm_contact .desc{
+	max-width: 50%;
+	float: left;
+	padding-top: 95px;
+}
+.waxon_tm_contact .desc p{
+	font-style: italic;
+}
+.waxon_tm_contact .contact_inner .left{
+	width: 50%;
+	padding-right: 25px;
+}
+.waxon_tm_contact .fields{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_contact .fields .first{
+	width: 100%;
+	float: left;
+}
+.waxon_tm_contact .fields ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.waxon_tm_contact .fields ul li{
+	width: 100%;
+	margin: 0px 0px 30px 0px;
+	float: left;
+}
+.waxon_tm_contact .fields ul li input{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,.1);
+	background-color: transparent;
+}
+.waxon_tm_contact .fields ul li input:focus{
+	outline: none;
+	border: 1px solid rgba(0,0,0,.3);
+}
+.waxon_tm_contact .fields .last textarea{
+	width: 100%;
+	border: 1px solid rgba(0,0,0,.1);
+	height: 120px;
+	resize: none;
+	margin-bottom: 20px;
+	background-color: transparent;
+}
+.waxon_tm_contact .fields .last textarea:focus{
+	outline: none;
+	border: 1px solid rgba(0,0,0,.3);
+} 
+.waxon_tm_contact .empty_notice{
+	color: #F52225;
+	margin-bottom: 7px;
+	display: none;
+	text-align: left;
+	font-weight: 500;
+}
+.waxon_tm_contact .contact_error{
+	color: #F52225;
+	text-align: left;
+	font-weight: 500;
+}
+.waxon_tm_contact .returnmessage{
+	color:#3A00FF;
+	margin-bottom: 7px;
+	text-align: left;
+	font-weight: 500;
+}
+.waxon_tm_contact .waxon_tm_button a{
+	display: block;
+}
+.waxon_tm_contact .right{
+	width: 50%;
+	padding-left: 25px;
+	position: relative;
+	top:6px;
+}
+.waxon_tm_map{
+	width: 100%;
+	float: left;
+}
+.waxon_tm_map .mapouter{
+	width:100% !important;
+}
+
+/*---------------------------------------------------*/
+/*	11) WAXON COPYRIGHT
+/*---------------------------------------------------*/
+
+.waxon_tm_copyright{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #000;
+	padding: 90px 0px 60px 0px;
+}
+.waxon_tm_copyright .copyright_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_copyright .copyright_inner > ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.waxon_tm_copyright .copyright_inner > ul > li{
+	margin: 0px 0px 30px 0px;
+	width: 25%;
+	float: left;
+	padding-left: 30px;
+}
+.waxon_tm_copyright .copyright_inner > ul > li span{
+	display: block;
+	color: #fff;
+	font-family: "Poppins";
+	font-weight: 500;
+}
+.waxon_tm_copyright .copyright_inner > ul > li span a{
+	text-decoration: none;
+	color: #fff;
+}
+.waxon_tm_copyright .copyright_inner .social ul{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	top: 4px;
+}
+.waxon_tm_copyright .copyright_inner .social ul li{
+	margin: 0px 20px 0px 0px;
+	display: inline-block;
+}
+.waxon_tm_copyright .copyright_inner .social ul li:last-child{margin-right: 0px;}
+.waxon_tm_copyright .copyright_inner .social ul li a{
+	text-decoration: none;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
+.waxon_tm_copyright .copyright_inner .social ul li a .first{
+	position: absolute;
+	transform: translateY(100%);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_copyright .copyright_inner .social ul li a .second{
+	position: relative;
+	display: block;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_copyright .copyright_inner .social ul li a:hover .first{
+	transform: translateY(0);
+}
+.waxon_tm_copyright .copyright_inner .social ul li a:hover .second{
+	transform: translateY(-100%);
+}
+.waxon_tm_copyright .copyright_inner .social .svg{
+	color: #fff;
+	width: 17px;
+	height: 17px;
+}
+
+/*---------------------------------------------------*/
+/*	12) WAXON CURSOR
+/*---------------------------------------------------*/
+
+.mouse-cursor{
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  visibility: hidden;
+}
+.cursor-inner {
+  margin-left: -3px;
+  margin-top: -3px;
+  width: 6px;
+  height: 6px;
+  z-index: 10000001;
+  background-color: var(--main-color);
+  -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+  transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
+}
+.cursor-inner.cursor-hover {
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: var(--main-color);
+  opacity: .3;
+}
+.cursor-outer {
+  margin-left: -15px;
+  margin-top: -15px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--main-color);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 10000000;
+  opacity: .5;
+  -webkit-transition: all .08s ease-out;
+  transition: all .08s ease-out;
+}
+.cursor-outer.cursor-hover{
+  opacity: 0;
+}
+.waxon_tm_all_wrap[data-magic-cursor="hide"] .mouse-cursor{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -1111;
+}
+
+/*---------------------------------------------------*/
+/*  13) WAXON GLITCH EFFECT
+/*---------------------------------------------------*/
+
+.waxon_tm_hero .glitch_wrap{
+	position: relative;
+	width: 100%;
+	height:100%;
+	float: left;
+	overflow: hidden;
+}
+.glitch{
+	position: absolute;
+ 	width: 100%;
+ 	height: 100%;
+	top: 0;
+ 	left: 0;
+	background-image: url("..//img/slider/1.jpg");
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-position: center;
+	z-index: -1 !important;
+	opacity: 1;
+	transform: scale(1);
+}
+.glitch:before{
+	content: "";
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+/*---------------------------------------------------*/
+/*  14) WAXON PARTICLE EFFECT
+/*---------------------------------------------------*/
+
+.waxon_tm_hero .particle_wrapper{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+#particles-js {
+	width: 100%;
+	height: 100%;
+  	position: absolute;
+  	z-index: 2;
+}
+
+/*---------------------------------------------------*/
+/*  15) WAXON SLIDER
+/*---------------------------------------------------*/
+
+.fn_cs_personal_slider{
+	width: 100%;
+	height: 100%;
+	clear: both;
+	float: left;
+}
+.fn_cs_personal_slider .main_image{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+    height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.fn_cs_personal_slider .swiper-container{
+	cursor: none;
+	overflow: hidden;
+	height: 100%;
+}
+.fn_cs_personal_slider .swiper-slide{
+	overflow: hidden;
+}
+
+/*---------------------------------------------------*/
+/*  WAXON SETTINGS
+/*---------------------------------------------------*/
+
+.waxon_tm_settings{
+	position: fixed;
+	z-index: 200;
+	top: 15%;
+	right: -200px;
+	width: 200px;
+	background-color: rgba(0,0,0,1.00);
+	padding: 40px 20px 33px 30px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_settings.opened{
+	right: 0px;
+}
+.waxon_tm_settings .wrapper{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_settings .icon{
+	position: absolute;
+	top: 0px;
+	right: 100%;
+	background-color: #000;
+	padding: 12px 12px 4px 12px;
+}
+.waxon_tm_settings .icon .svg{
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	animation: fa-spin 2s infinite linear;
+}
+.waxon_tm_settings .link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+
+@-webkit-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.waxon_tm_settings .title{
+	color: #fff;
+	font-family: "Poppins";
+	font-weight: 600;
+	position: relative;
+	display: inline-block;
+}
+.waxon_tm_settings .title:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: rgba(255,255,255,.2);
+	left: 0px;
+	bottom: 0px;
+}
+.waxon_tm_settings .colors{
+	margin: 0px 0px 22px 0px;
+	list-style-type: none;
+	padding-top: 32px;
+}
+.waxon_tm_settings .colors li{
+	margin: 0px;
+	display: inline-block;
+}
+.waxon_tm_settings .colors li a{
+	text-decoration: none;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+}
+.waxon_tm_settings .direction{
+	list-style-type: none;
+	margin:  0px;
+}
+.waxon_tm_settings .direction li{
+	margin: 0px 20px 0px 0px;
+	display: inline-block;
+}
+.waxon_tm_settings .direction li a{
+	opacity: .4;
+	text-decoration: none;
+	color: #fff; 
+}
+.waxon_tm_settings .direction li a.active{
+	opacity: 1;
+}
+.waxon_tm_settings .direction li .svg{
+	width: 25px;
+	height: 25px;
+}
+.waxon_tm_settings .colors li.bl{
+	display: inline-block;
+}
+.waxon_tm_settings .colors li.wh{
+	display: none;
+}
+body.dark .waxon_tm_settings .colors li.bl,
+.waxon_tm_settings.changed .colors li.bl{
+	display: none;
+}
+body.dark .waxon_tm_settings .colors li.wh,
+.waxon_tm_settings.changed .colors li.wh{
+	display: inline-block;
+}
+body.dark .waxon_tm_settings,
+.waxon_tm_settings.changed{
+	background-color: #fff;
+}
+body.dark .waxon_tm_settings .icon,
+.waxon_tm_settings.changed .icon{
+	background-color: #fff;
+}
+body.dark .waxon_tm_settings .icon .svg,
+.waxon_tm_settings.changed .icon .svg{
+	color: #000;
+}
+body.dark .waxon_tm_settings .title,
+.waxon_tm_settings.changed .title{
+	color: #000;
+}
+body.dark .waxon_tm_settings .title:before,
+.waxon_tm_settings.changed .title:before{
+	background-color: rgba(0,0,0,.5);
+}
+body.dark .waxon_tm_settings .direction li a,
+.waxon_tm_settings.changed .direction li a{
+	color: #000;
+}
+body.dark .waxon_tm_settings .cursor li:nth-child(1) a,
+.waxon_tm_settings.changed .cursor li:nth-child(1) a{
+	border-color: #000;
+}
+body.dark .waxon_tm_settings .cursor li:nth-child(1) a:before,
+.waxon_tm_settings.changed .cursor li:nth-child(1) a:before{
+	background-color: #000;
+}
+body.dark .waxon_tm_settings .cursor li .svg,
+.waxon_tm_settings.changed .cursor li .svg{
+	color: #000;
+}
+.waxon_tm_settings .cursor{
+	margin: 0px;
+	list-style-type: none;
+	padding-top: 15px;
+}
+.waxon_tm_settings .cursor li{
+	margin: 0px 20px 0px 0px;
+	display: inline-block;
+}
+.waxon_tm_settings .cursor li a{
+	text-decoration: none;
+	color: #fff;
+	opacity: .4;
+	font-weight: 600;
+}
+.waxon_tm_settings .cursor li a.showme{
+	opacity: 1;
+}
+.waxon_tm_settings .cursor li:nth-child(1) a{
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	border: 2px solid #fff;
+	position: relative;
+	display: inline-block;
+}
+.waxon_tm_settings .cursor li:nth-child(1) a:before{
+	position: absolute;
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	background-color: #fff;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+}
+.waxon_tm_settings .cursor li .svg{
+	width: 25px;
+	height: 25px;
+	color: #fff;
+}
+.waxon_tm_settings .cursor li:nth-child(2){
+	position: relative;
+	top: -2px;
+}
+.waxon_tm_settings .effect{
+	margin: 0px;
+	list-style-type: none;
+	padding-top: 15px;
+	padding-bottom: 25px;
+}
+.waxon_tm_settings .effect li{
+	margin: 0px 0px 5px 0px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 100%;
+	background-color: #fff;
+	opacity: .4;
+}
+.waxon_tm_settings .effect li a{
+	text-decoration: none;
+	color: #000;
+	font-size: 13px;
+	font-weight: 600;
+	font-family: "Poppins";
+	display: block;
+	position: relative;
+	top: 2px;
+}
+.waxon_tm_settings .effect li.selected{
+	background-color: #fff;
+	opacity: 1;
+}
+
+/*---------------------------------------------------*/
+/*  WAXON INTRO PAGE
+/*---------------------------------------------------*/
+
+.waxon_tm_intro_page{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_intro_page .waxon_tm_button a{
+	background-color: rgba(255,76,79,1.00);
+}
+.waxon_tm_intro_page .hero_header{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	float: left;
+	margin-bottom: 135px;
+	background-color: #000;
+}
+.waxon_tm_intro_page .hero_header .wp{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	z-index: 1;
+	display: inline-block;
+	background-color: #fff;
+	padding: 5px 40px;
+	font-family: "Poppins";
+	font-weight: 500;
+	font-size: 18px;
+	font-weight: 600;
+	border-radius: 50px;
+}
+.waxon_tm_intro_page .hero_header .wp a{
+	text-decoration: none;
+	color: #e54b4b;
+	font-weight: 600;
+}
+.waxon_tm_intro_page .hero_header .container.intro{
+	height: 100%;
+	max-width: 1400px;
+}
+.waxon_tm_intro_page .hero_header .content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	z-index: 1;
+}
+.waxon_tm_intro_page .hero_header .content .titlehero{
+	color: #fff;
+	font-weight: 600;
+	font-family: "Poppins";
+	font-size: 25px;
+	padding: 45px 0px;
+}
+.waxon_tm_button.intro a:hover{color: #fff !important;}
+.waxon_tm_intro_page .mainpart{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-bottom: 85px;
+}
+.waxon_tm_intro_page .mainpart .intro_title{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	text-align: center;
+	margin-bottom: 85px;
+}
+.waxon_tm_intro_page .mainpart .intro_title h3{
+	font-size: 35px;
+	font-weight: 700;
+	color: #000;
+	text-transform: uppercase;
+}
+.container.demo{
+	max-width: 1400px;
+}
+.waxon_tm_intro_page .demo_list,
+.waxon_tm_intro_page .demo_list .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_intro_page .demo_list ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.waxon_tm_intro_page .demo_list ul li{
+	margin: 0px 0px 60px 0px;
+	width: 50%;
+	float: left;
+	padding-left: 50px;
+}
+.waxon_tm_intro_page .demo_list ul li .in{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+	text-align: center;
+}
+.waxon_tm_intro_page .demo_list ul li img{
+	box-shadow: 0px 0px 20px rgba(0,0,0,.2);
+}
+.waxon_tm_intro_page .demo_list ul li .full_link{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+.waxon_tm_intro_page .demo_list ul li .detail{
+	display: inline-block;
+	position: relative;
+}
+.waxon_tm_intro_page .demo_list ul li .detail .new{
+	position: absolute;
+	left: 100%;
+	background-color: #e54b4b;
+	color: #fff;
+	font-weight: 600;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding:2px 20px;
+	border-radius: 50px;
+	top: 50%;
+	margin-left: 20px;
+	transform: translateY(-50%);
+	margin-top: 10px;
+}
+
+.waxon_tm_intro_page .demo_list ul li h3{
+	font-size: 18px;
+	font-weight: 600;
+	padding-top: 20px;
+}
+.waxon_tm_intro_page .intro_footer{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #000;
+	text-align: center;
+	padding: 175px 20px 200px 20px;
+}
+.waxon_tm_intro_page .intro_footer .inner{
+	width: 100%;
+	max-width: 700px;
+	margin: 0px auto;
+}
+.waxon_tm_intro_page .intro_footer .inner h3{
+	color: #fff;
+    font-weight: 700;
+    font-size: 50px;
+    max-width: 650px;
+    margin-bottom: 40px;
+}
+
+.waxon_tm_intro_fixed_price .pricing-info,
+.waxon_tm_intro_fixed_price .anim {text-decoration: none;
+	color: #fff;
+    font-family: "Poppins";
+    background-color: #e54b4b;
+    position: fixed;
+    font-size: 22px;
+    text-align: center;
+    z-index: 5;
+    border-radius: 100%;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+	display: inline-block;
+	bottom: 50px;
+    right: 50px;
+		
+	-webkit-transition: all 0.2s;
+	   -moz-transition: all 0.2s;
+	    -ms-transition: all 0.2s;
+	     -o-transition: all 0.2s;
+	        transition: all 0.2s;	
+		
+}
+
+@-webkit-keyframes myAnim {
+    0% {
+        -webkit-transform: scale(.1);
+        transform: scale(.1);
+        opacity: 0
+    }
+    50% {
+        opacity: .3
+    }
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0
+    }
+}
+
+@keyframes myAnim {
+    0% {
+        -webkit-transform: scale(.1);
+        transform: scale(.1);
+        opacity: 0
+    }
+    50% {
+        opacity: .3
+    }
+    100% {
+
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0
+    }
+}
+
+.waxon_tm_intro_fixed_price .anim:nth-child(1) {
+    -webkit-animation: myAnim 2s infinite;
+    animation: myAnim 2s infinite
+}
+
+.waxon_tm_intro_fixed_price .anim:nth-child(2) {
+    -webkit-animation: myAnim 2s infinite .3s;
+    animation: myAnim 2s infinite .3s
+}
+
+.waxon_tm_intro_fixed_price .anim:nth-child(3) {
+    -webkit-animation: myAnim 2s infinite .6s;
+    animation: myAnim 2s infinite .6s
+}
+
+/*---------------------------------------------------*/
+/*	16) WAXON MODALBOXES
+/*---------------------------------------------------*/
+
+.waxon_tm_modalbox{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100vh;
+	z-index: 20;
+	background-color: rgba(0,0,0,.8);
+	opacity: 0;
+	visibility: hidden;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_modalbox.opened{
+	opacity: 1;
+	visibility: visible;
+}
+.waxon_tm_modalbox .box_inner{
+	position: absolute;
+	top: 70px;
+	bottom: 70px;
+	width: 968px;
+	left: 50%;
+	transform: translateX(-53%);
+	background-color: #fff;
+	z-index: 1;
+	opacity: 0;
+	visibility: hidden;
+	transition-delay: .3s;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_modalbox.opened .box_inner{
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(-50%);
+}
+.waxon_tm_modalbox .close{
+	position: fixed;
+	left: 100%;
+	top: 0px;
+	margin-left: 30px;
+	z-index: 10;
+}
+.waxon_tm_modalbox .close a{
+	display: block;
+	width: 40px;
+	height: 40px;
+	text-decoration: none;
+	color: #fff;
+	border:2px solid #fff;
+	position: relative;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_modalbox .close a:hover{
+	border-radius: 100%;
+}
+.waxon_tm_modalbox .close a i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.waxon_tm_modalbox .description_wrap{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding: 50px;
+	overflow-y: scroll;
+}
+.waxon_tm_modalbox .description_wrap:before{
+	position: fixed;
+	content: "";
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	background-color: #fff;
+	z-index: 5;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.waxon_tm_modalbox .description_wrap:after{
+	position: fixed;
+	content: "";
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 50px;
+	background-color: #fff;
+	z-index: 5;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.waxon_tm_modalbox .description_wrap::-webkit-scrollbar{
+  width: 11px;
+}
+.waxon_tm_modalbox .description_wrap{
+  scrollbar-width: thin;
+  scrollbar-color: #bbb #fff;
+}
+.waxon_tm_modalbox .description_wrap:-webkit-scrollbar-track{
+  background: #fff;
+}
+.waxon_tm_modalbox .description_wrap::-webkit-scrollbar-thumb{
+  background-color: #bbb;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+/*Portfolio*/
+
+.hidden_content_portfolio{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.waxon_tm_modalbox .hidden_content_portfolio{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.waxon_tm_modalbox .popup_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_modalbox .popup_details .top_image{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+.waxon_tm_modalbox .popup_details .top_image img{
+	position: relative;
+	min-width: 100%;
+	opacity: 0;
+}
+.waxon_tm_modalbox .popup_details .top_image .main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.waxon_tm_modalbox .portfolio_main_title{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.waxon_tm_modalbox .portfolio_main_title .category a{
+	display: inline-block;
+	color: var(--main-color);
+	margin-bottom: 7px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_modalbox .portfolio_main_title .category a:hover{
+	color: var(--yellow-color);
+}
+.waxon_tm_modalbox .portfolio_main_title h3{
+	font-size: 25px;
+}
+.waxon_tm_modalbox .main_details{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	margin-bottom: 60px;
+}
+.waxon_tm_modalbox .main_details .textbox{
+	width: 70%;
+	padding-right: 40px;
+}
+.waxon_tm_modalbox .main_details .textbox p{
+	margin-bottom: 10px;
+	opacity: .8;
+}
+.waxon_tm_modalbox .main_details .textbox p:last-child{
+	margin-bottom: 0px;
+}
+.waxon_tm_modalbox .main_details .detailbox{
+	width: 30%;
+	padding-left: 40px;
+}
+.waxon_tm_modalbox .main_details .detailbox > ul{
+	margin: 0px;
+	list-style-type: none;
+}
+.waxon_tm_modalbox .main_details .detailbox > ul > li{
+	margin: 0px 0px 10px 0px;
+	width: 100%;
+	float: left;
+}
+.waxon_tm_modalbox .main_details .detailbox > ul > li:last-child{
+	margin-bottom: 0px;
+}
+.waxon_tm_modalbox .main_details .detailbox > ul > li span:last-child{
+	opacity: .8;
+}
+.waxon_tm_modalbox .main_details .detailbox .first{
+    font-weight: 700;
+	display: block;
+}
+.waxon_tm_modalbox .main_details .detailbox span a{
+	text-decoration: none;
+	color: var(--main-color);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_modalbox .main_details .detailbox span a:hover{
+	color: var(--yellow-color);
+}
+.waxon_tm_modalbox .main_details .detailbox .share{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	top: 7px;
+}
+.waxon_tm_modalbox .main_details .detailbox .share li{
+	margin: 0px 13px 0px 0px;
+	display: inline-block;
+}
+.waxon_tm_modalbox .main_details .detailbox .share li:last-child{
+	margin-right: 0px;
+}
+.waxon_tm_modalbox .main_details .detailbox .share li a{
+	text-decoration: none;
+	color: var(--main-color);
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_modalbox .main_details .detailbox .share li a:hover{
+	color: var(--yellow-color);
+}
+.waxon_tm_modalbox .additional_images{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_modalbox .additional_images ul{
+	margin: 0px 0px 0px -30px;
+	list-style-type: none;
+}
+.waxon_tm_modalbox .additional_images ul li{
+	margin: 0px 0px 30px 0px;
+	float: left;
+	width: 50%;
+	padding-left: 30px;
+}
+.waxon_tm_modalbox .additional_images ul li:nth-child(3n-2){
+	width: 100%;
+}
+.waxon_tm_modalbox .additional_images ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	position: relative;
+}
+.waxon_tm_modalbox .additional_images ul li .my_image{
+	position: relative;
+}
+.waxon_tm_modalbox .additional_images ul li .my_image img{
+	opacity: 0;
+	min-width: 100%;
+}
+.waxon_tm_modalbox .additional_images ul li .my_image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/*Blog*/
+
+.waxon_tm_news .news_hidden_details{
+	display: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -11;
+}
+.waxon_tm_modalbox .news_popup_informations{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+}
+.waxon_tm_modalbox .news_popup_informations .image{
+	position: relative;
+	margin-bottom: 30px;
+}
+.waxon_tm_modalbox .news_popup_informations .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.waxon_tm_modalbox .news_popup_informations .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.waxon_tm_modalbox .news_popup_informations .text{
+	width: 100%;
+	float: left;
+}
+.waxon_tm_modalbox .news_popup_informations .text p{
+	margin-bottom: 10px;
+	opacity: .8;
+}
+.waxon_tm_modalbox .news_popup_informations .text p:last-child{
+	margin-bottom: 0px;
+}
+.waxon_tm_modalbox .meta{
+	width: 100%;
+	float: left;
+}
+.waxon_tm_modalbox .meta a{
+	text-decoration: none;
+	color: #000;
+}
+.waxon_tm_modalbox .news_popup_informations .title{
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+}
+.waxon_tm_modalbox .news_popup_informations .title h3{
+	font-size: 25px;
+}
+
+/*---------------------------------------------------*/
+/*	17) WAXON ABOUT PAGE
+/*---------------------------------------------------*/
+
+.waxon_tm_about_page{
+	width: 100%;
+	float: left;
+	margin-top: 250px;
+}
+.waxon_tm_about_page .waxon_tm_about{
+	padding-top: 160px;
+	margin-bottom: 153px;
+}
+.waxon_tm_skills{
+	width: 100%;
+	float: left;
+	background-color: #F8F9FA;
+	padding: 205px 0px 130px 0px;
+}
+.progress_wrapper{
+	width: 100%;
+	float: left;
+	display: flex;
+	margin-top: 95px;
+}
+.progress_wrapper .line_progress{
+	width: 50%;
+	padding-right: 50px;
+}
+.progress_inner{
+	width:100%;
+	margin-bottom:25px;
+}
+.progress_inner:last-child{
+	margin-bottom: 0px;
+}
+.progress_inner > span{
+	margin:0px 0px 11px 0px;
+	width:100%;
+	display:block;
+	text-align:left;
+	color: #000;
+}
+.progress_inner span.number{
+	float: right;
+}
+.progress_inner .background{
+	background:rgba(0,0,0,.09);
+	width:100%;
+	min-width:100%;
+	position:relative;
+	height:8px;
+}
+.progress_inner .background .bar_in{
+	height:100%;
+	background: var(--main-color);
+	width:0px;
+	overflow:hidden;
+}
+.progress_inner .background .bar{
+	width:0px;
+	height:100%;
+}
+.progress_inner .background .bar.open{
+	-webkit-animation: wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Safari 4+ */
+	-moz-animation:    wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* Fx 5+ */
+	animation:         wow 2s cubic-bezier(0.165, 0.840, 0.440, 1.000);  /* IE 10+ */
+	width:100%;	
+}
+
+@-webkit-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@-moz-keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+@keyframes wow {0%{ width:0%; } 100%{ width:100%; }}
+
+.circular_progress_bar{
+	width: 50%;
+	padding-left: 50px;
+}
+.circular_progress_bar ul{
+	margin: 0px 0px 0px -10px;
+	list-style-type: none;
+}
+.circular_progress_bar ul li{
+	margin: 0px 0px 10px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 10px;
+}
+.circular_progress_bar .myCircle{
+	position: relative;
+	float: left;
+}
+.circular_progress_bar .list_inner{
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.circular_progress_bar .title{
+	width: 100%;
+	max-width: 165px;
+	float: left;
+	color: var(--main-color);
+}
+.circular_progress_bar .title a{
+	color: #000;
+}
+.circular_progress_bar .number{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #000;
+	margin-left: 4px;
+}
+.waxon_tm_timeline{
+	width: 100%;
+	float: left;
+	padding: 200px 0px 140px 0px;
+}
+.waxon_tm_timeline .timeline_wrapper{
+	width: 100%;
+	float: left;
+	display: flex;
+	margin-top: 50px;
+}
+.waxon_tm_timeline .study{
+	width: 50%;
+	padding-right: 50px;
+}
+.waxon_tm_timeline .job{
+	width: 50%;
+	padding-left: 50px;
+}
+.waxon_tm_timeline .item_list{
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	margin-top: 55px;
+}
+.waxon_tm_timeline .item_list ul{
+	margin: 0px;
+	list-style-type: none;
+	position: relative;
+	display: inline-block;
+	padding-top: 10px;
+}
+.waxon_tm_timeline .item_list ul:before{
+	content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.07);
+}
+.waxon_tm_timeline .item_list ul li{
+	margin: 0px;
+	width: 100%;
+	float: left;
+	position: relative;
+	padding-left: 20px;
+	padding-bottom: 45px;
+}
+.waxon_tm_timeline .item_list ul li:last-child{padding-bottom: 0px;}
+.waxon_tm_timeline .item_list ul li:before{
+	content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background: #fff;
+    border-radius: 100%;
+    border: solid 1px #CCC;
+    left: -9px;
+    top: 8px;
+}
+.waxon_tm_timeline .item_list ul li .list_inner{
+	width: 100%;
+	height: auto;
+	clear: both;
+	display: flex;
+	position: relative;
+}
+.waxon_tm_timeline .item_list ul li .time{
+	width: 50%;
+	padding-right: 20px;
+}
+.waxon_tm_timeline .item_list ul li .time span{
+	display: inline-block;
+	padding: 5px 25px;
+	background-color: var(--main-color);
+	color: #fff;
+	border-radius: 50px;
+	font-size: 15px;
+	white-space: nowrap;
+}
+.waxon_tm_timeline .item_list ul li .place{
+	width: 50%;
+	padding-left: 20px;
+}
+.waxon_tm_timeline .item_list ul li .place h3{
+	font-size: 18px;
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+.waxon_tm_timeline .item_list ul li .place span{
+	font-size: 15px;
+	font-style: italic;
+	color: #767676;
+}
+.waxon_tm_presentation{
+	width: 100%;
+	float: left;
+	position: relative;
+	padding: 150px 20px;
+	text-align: center;
+}
+.waxon_tm_presentation .background{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.waxon_tm_presentation .overlay{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,.6);
+	z-index: 1;
+}
+.waxon_tm_presentation .content{
+	position: relative;
+	z-index: 2;
+}
+.fn_cs_video .rounded{
+	width: 100px;
+	height: 100px;
+	display: block;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%);
+	border-radius: 100%;
+	z-index: 10;
+	background-color: #fff;
+}
+.fn_cs_video .rounded:before{
+	position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 0 13px 26px;
+    border-color: transparent transparent transparent #000;
+    top: 50%;
+    left: 50%;
+    margin-left: 4px;
+    transform: translate(-50%,-50%);
+}
+.fn_cs_video .rounded a:after{
+	content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+	top: 50%;
+	left: 50%;
+	margin: -62px 0 0 -62px;
+    background-color: inherit;
+    z-index: -1;
+    pointer-events: none;
+    border: 12px solid rgba(255,255,255,.8);
+	opacity: 0.8;
+    border-radius: 100%;
+	-webkit-animation: cs_fn_pulse 2s cubic-bezier(0.3,1,0.3,1) infinite;
+    animation: cs_fn_pulse 2s cubic-bezier(0.3,1,0.3,1) infinite;
+}
+.fn_cs_video .rounded a{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	text-decoration: none;
+	z-index: 1;
+}
+@-webkit-keyframes cs_fn_pulse{ from{ opacity:1;  transform:scale(1,1)}
+ to{ opacity:0;  transform:scale(1.4,1.4)}
+}
+@keyframes cs_fn_pulse{ from{ opacity:1;  transform:scale(1,1)}
+ to{ opacity:0;  transform:scale(1.4,1.4)}
+}
+.waxon_tm_presentation .text{
+	max-width: 500px;
+	margin: 0px auto;
+	padding: 33px 0px 40px 0px;
+}
+.waxon_tm_presentation .text p{
+	text-align: center;
+    color: #FFFFFF;
+    font-family: "Poppins", Sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.4em;
+}
+.waxon_tm_presentation .button a{
+	text-decoration: none;
+	display: inline-block;
+	font-family: "Roboto";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 2em;
+    letter-spacing: 0.2px;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #14EC3200;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 13px 50px 13px 50px;
+	margin: 0px auto;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_presentation .button a:hover{
+	color: #000;
+	background-color: #fff;
+}
+.waxon_tm_counter{
+	width: 100%;
+	float: left;
+	padding: 78px 0px 33px 0px;
+}
+.waxon_tm_counter .counter_list{
+	width: 100%;
+	float: left;
+}
+.waxon_tm_counter .counter_list ul{
+	margin: 0px 0px 0px -40px;
+	list-style-type: none;
+}
+.waxon_tm_counter .counter_list ul li{
+	margin: 0px 0px 40px 0px;
+	width: 25%;
+	float: left;
+	padding-left: 40px;
+	text-align: center;
+}
+.waxon_tm_counter .counter_list .list_inner{
+	position: relative;
+	width: 100%;
+	float: left;
+}
+.waxon_tm_counter .counter_list .list_inner h3{
+	font-size: 150px;
+    font-weight: 700;
+    color: var(--main-color);
+	opacity: .05;
+    margin: 0px;
+    padding: 0px;
+}
+.waxon_tm_counter .counter_list .list_inner .title{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    font-family: "Poppins";
+    color: #000;
+	display: block;
+	font-style: italic;
+}
+.waxon_tm_member{
+	width: 100%;
+	float: left;
+	background-color: #F8F9FA;
+	padding: 200px 0px 100px 0px;
+}
+.waxon_tm_member .member_inner{
+	width: 100%;
+	float: left;
+}
+.waxon_tm_member .list{
+	width: 100%;
+	float: left;
+	margin-top: 100px;
+}
+.waxon_tm_member .list > ul{
+	margin: 0px 0px 0px -50px;
+	list-style-type: none;
+}
+.waxon_tm_member .list > ul > li{
+	margin: 0px 0px 50px 0px;
+	width: 33.3333%;
+	float: left;
+	padding-left: 50px;
+}
+.waxon_tm_member .list .list_inner{
+	width: 100%;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+.waxon_tm_member .list .image{
+	position: relative;
+	margin-bottom: 20px;
+}
+.waxon_tm_member .list .image img{
+	position: relative;
+	opacity: 0;
+	min-width: 100%;
+}
+.waxon_tm_member .list .image .main{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.waxon_tm_member .list .details{
+	width: 100%;
+	float: left;
+	position: relative;
+}
+.waxon_tm_member .list .details h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.waxon_tm_member .list .details span{
+    font-style: italic;
+}
+.waxon_tm_member .social{
+    position: absolute;
+	right: -30px;
+	bottom: 0px;
+	
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+.waxon_tm_member .list .list_inner:hover .social{
+	right: 15px;
+}
+.waxon_tm_member .social ul{
+   	margin: 0px;
+	list-style-type: none;
+}
+.waxon_tm_member .social ul li{
+   	margin: 0px;
+}
+.waxon_tm_member .social ul li a{
+   	display: inline-block;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	background-color: var(--main-color);
+	border-radius: 3px;
+	color: #fff;
+}
+.waxon_tm_member .social ul li i{
+   	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 13px;
+}
+
+/*---------------------------------------------------*/
+/*	18) WAXON MEDIA QUERIES (FOR SMALL DEVICES)
+/*---------------------------------------------------*/
+
+@media (max-width: 1600px){
+	.container{max-width: 1120px;}
+	.waxon_tm_hero .content_inner h3{font-size: 80px;}
+	.waxon_tm_news ul li .details .title a{font-size: 17px;}
+	.waxon_tm_news ul li .details{padding: 30px 30px 25px 30px;}
+	.circular_progress_bar .title{max-width: 145px;}
+	.progress_inner > span{margin-bottom: 5px;}
+	.progress_inner{margin-bottom: 24px;}
+	.waxon_tm_modalbox .box_inner{width: 800px;}
+	.waxon_tm_modalbox .description_wrap{padding: 40px;}
+	.waxon_tm_modalbox .description_wrap:before{height: 40px;}
+	.waxon_tm_modalbox .description_wrap:after{height: 40px;}
+	.waxon_tm_modalbox .close{margin-left: 20px;}
+}
+
+@media (max-width: 1200px){
+	.waxon_tm_hero .background .leftpart{width: 0%;}
+	.waxon_tm_hero .background .rightpart{padding-left: 0px;}
+}
+
+@media (max-width: 1040px){
+	.waxon_tm_preloader{display: none;}
+	.waxon_tm_topbar{display: none;}
+	.waxon_tm_mobile_menu{display: block;}
+	.waxon_tm_hero .content_inner h3{font-size: 60px;}
+	.waxon_tm_main_title .title h3 .bg{display: none;}
+	.waxon_tm_about .name h3 .bg{display: none;}
+	.waxon_tm_about .about_inner{flex-direction: column;align-items: baseline;}
+	.waxon_tm_about .about_inner .left{width: 100%;margin-bottom: 50px;}
+	.waxon_tm_about .about_inner .left .image .myDot{display: none;}
+	.waxon_tm_about .about_inner .right{width: 100%;padding-left: 0px;}
+	.waxon_tm_about .name h3{font-size: 30px;}
+	.waxon_tm_main_title .title h3{font-size: 30px;}
+	.waxon_tm_main_title{display: block;}
+	.waxon_tm_portoflio .portfolio_filter{display: block;}
+	.waxon_tm_portoflio .portfolio_filter .wrapper{display: none;}
+	.waxon_tm_portoflio .portfolio_filter ul li{left: 0px;opacity: 1;visibility: visible;}
+	.waxon_tm_portoflio .portfolio_filter ul{padding-right: 0px;padding-top: 40px;}
+	.waxon_tm_portoflio .portfolio_inner{padding-top: 30px;}
+	.waxon_tm_portoflio .portfolio_inner ul li{width: 50%;}
+	.waxon_tm_news .news_inner ul li{width: 50%;}
+	.waxon_tm_contact .desc{max-width: 100%;}
+	.waxon_tm_contact .contact_inner .wrapper{flex-direction: column;align-items: baseline;}
+	.waxon_tm_contact .contact_inner .left{width: 100%;padding-right: 0px;margin-bottom: 40px;}
+	.waxon_tm_contact .right{width: 100%;padding-left: 0px;}
+	.waxon_tm_copyright .copyright_inner > ul > li{width: 100%;padding-left: 0px;}
+	.waxon_tm_copyright .copyright_inner > ul{display: block;margin: 0px;}
+	.waxon_tm_portoflio{padding-top: 140px;margin-bottom: 140px;}
+	.waxon_tm_news{padding-top: 140px;}
+	.waxon_tm_contact{padding-top: 140px;}
+	.progress_wrapper{flex-direction: column;}
+	.progress_wrapper .line_progress{width: 100%;padding-right: 0px;margin-bottom: 60px;}
+	.circular_progress_bar{width: 100%;padding-left: 0px;}
+	.waxon_tm_timeline .timeline_wrapper{flex-direction: column;}
+	.waxon_tm_timeline .study{width: 100%;padding-right: 0px;}
+	.waxon_tm_timeline .job{width: 100%;padding-left: 0px;}
+	.waxon_tm_counter .counter_list ul li{width: 33.3333%;}
+	.waxon_tm_member .list > ul > li{width: 50%;}
+	.waxon_tm_about_page{margin-top: 216px;}
+	.waxon_tm_skills{padding-top: 140px;}
+	.waxon_tm_member{padding-top: 140px;}
+	.waxon_tm_timeline{padding-top: 135px;}
+	.waxon_tm_about_page .waxon_tm_about{padding-top: 130px;}
+	.waxon_tm_modalbox .box_inner{width: 600px;top: 50px;bottom: 50px;}
+	.waxon_tm_modalbox .description_wrap{padding: 30px;}
+	.waxon_tm_modalbox .description_wrap:before{height: 30px;}
+	.waxon_tm_modalbox .description_wrap:after{height: 30px;}
+	.waxon_tm_modalbox .close a{width: 30px;height: 30px;}
+	.waxon_tm_modalbox .close{margin-left: 15px;}
+	.waxon_tm_modalbox .main_details{flex-direction: column;}
+	.waxon_tm_modalbox .main_details .textbox{width: 100%;padding-right: 0px;margin-bottom: 30px;}
+	.waxon_tm_modalbox .main_details .detailbox{width: 100%;padding-left: 0px;}
+	
+	
+	.mouse-cursor{display: none;}
+	.waxon_tm_settings{top: 20%;}
+}
+
+@media(max-width: 768px){
+	.waxon_tm_hero .content_inner h3{font-size: 50px;}
+	.waxon_tm_service ul li .svg{position: relative;margin-bottom: 20px;}
+	.waxon_tm_service ul li .details{padding-left: 0px;}
+	.waxon_tm_portoflio .portfolio_inner ul{margin: 0px;}
+	.waxon_tm_portoflio .portfolio_inner ul li{width: 100%;padding-left: 0px;}
+	.waxon_tm_news .news_inner ul{margin-left: 0px;}
+	.waxon_tm_news .news_inner ul li{width: 100%;padding-left: 0px;}
+	.waxon_tm_counter .counter_list ul li{width: 50%;}
+	.waxon_tm_counter .counter_list .list_inner h3{font-size: 90px;}
+	.waxon_tm_counter .counter_list .list_inner .title{font-size: 15px;}
+	.waxon_tm_counter .counter_list ul li{margin-bottom: 10px;}
+	.waxon_tm_counter{padding-bottom: 100px;}
+	.waxon_tm_member .list > ul{margin: 0px;}
+	.waxon_tm_member .list > ul > li{width: 100%;padding-left: 0px;}
+	.waxon_tm_timeline .item_list ul li .time span{font-size: 14px;padding: 2px 18px;}
+	.waxon_tm_timeline .item_list ul li .place{padding-left: 0px;}
+	.waxon_tm_timeline .item_list ul li .place h3{font-size: 16px;}
+	.circular_progress_bar .myCircle{float: none !important;}
+	.circular_progress_bar .title{max-width: 100%;}
+	.waxon_tm_modalbox .box_inner{width: 300px;top: 40px;bottom: 40px;}
+	.waxon_tm_modalbox .description_wrap{padding: 30px 25px 25px 25px;}
+	.waxon_tm_modalbox .description_wrap:before{height: 30px;}
+	.waxon_tm_modalbox .description_wrap:after{height: 25px;}
+	.waxon_tm_modalbox .close{margin-left: auto;left: auto;right: 25px;top: 15px;}
+	.waxon_tm_modalbox .close a{color: #000;width: auto;height: auto;border: none;font-size: 20px;}
+	.waxon_tm_modalbox .portfolio_main_title h3{font-size: 19px;}
+	.waxon_tm_modalbox .portfolio_main_title{margin-bottom: 15px;}
+	.waxon_tm_modalbox .additional_images ul{margin: 0px;}
+	.waxon_tm_modalbox .additional_images ul li{width: 100% !important;padding-left: 0px;margin-bottom: 20px;}
+	.waxon_tm_modalbox .news_popup_informations .title h3{font-size: 19px;}
+	.waxon_tm_modalbox .news_popup_informations .title{margin-bottom: 15px;}
+	
+	
+	.waxon_tm_intro_page .demo_list ul{margin: 0px;}
+	.waxon_tm_intro_page .demo_list ul li{width: 100%;padding-left: 0px;}
+	.waxon_tm_intro_page .intro_footer .inner h3{font-size: 35px;}
+	.waxon_tm_intro_fixed_price .pricing-info, .waxon_tm_intro_fixed_price .anim{width: 50px;height: 50px;line-height: 50px;bottom: 25px;right: 25px;font-size: 15px;}
+	.waxon_tm_intro_page .hero_header .content{width: 100%;}
+	.waxon_tm_intro_page .hero_header .content .titlehero{font-size: 19px;}
+}
